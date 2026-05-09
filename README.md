@@ -11,7 +11,7 @@ The application simulates a live basketball scoring system where users can updat
     -   [The Challenge](#the-challenge)
     -   [Stretch Goals](#stretch-goals)
     -   [GIF Demo](#gif-demo)
-    -   [Live Demo](#live-web-app)
+    -   [Live Demo](#live-demo)
 -   [My process](#my-process)
     -   [Built with](#built-with)
     -   [What I learned](#what-i-learned)
@@ -19,7 +19,7 @@ The application simulates a live basketball scoring system where users can updat
 -   [Contributing](#contributing)
 -   [Contact](#contact)
 -   [Support](#support)
--   [Author](#author)
+-   [Contact](#contact)
 
 ## Overview
 
