@@ -1,5 +1,7 @@
-let homeScoresEl = document.getElementById("home-scores-el")
-let awayScoresEl = document.getElementById("away-scores-el")
+let homeScoresEl = document.getElementById("home-team-el")
+let awayScoresEl = document.getElementById("away-team-el")
+const newGame = document.getElementById("new-game")
+const addPeriod = document.getElementById("add-period")
 
 let homeScore = 0
 let awayScore = 0
@@ -21,7 +23,6 @@ function addAwayScore(points){
 
 
 // TO HIGHLIGHT THE WINNER
-
 function winnerHighlight(){
     if (homeScore > awayScore){
         homeScoresEl.style.color = "#3dff33"
@@ -34,15 +35,26 @@ function winnerHighlight(){
     } else{
         awayScoresEl.style.color = "#ff3c5d"
         homeScoresEl.style.color = "#ff3c5d"
-        console.log("Draw")
-    }
-    
+    }   
 }
 
+// FOR PERIOD
+let periodCount = 0
+let periodEl = document.getElementById("period-el")
+
+addPeriod.addEventListener("click", function(){
+    periodCount += 1
+    periodEl.textContent = periodCount
+
+    if(periodCount >= 4){
+        periodCount = 0
+    }else{
+        periodCount = periodCount
+    }
+})
 
 // TO START NEW GAME
-
-function newGame(){
+newGame.addEventListener("click", function(){
     awayScore = awayScore - awayScore
     awayScoresEl.textContent = awayScore
     awayScoresEl.style.color = "#ff3c5d"
@@ -53,49 +65,4 @@ function newGame(){
     
     periodCount = 0
     periodEl.textContent = periodCount
-}
-
-// FOR PERIOD
-
-let periodCount = 0
-let periodEl = document.getElementById("period-el")
-
-function addPeriod(){
-    periodCount += 1
-    periodEl.textContent = periodCount
-
-    if(periodCount >= 4){
-        periodCount = 0
-    }else{
-        periodCount = periodCount
-    }
-}
-
-
-
-// COUNTDOWN TIMER
-
-// function startTimer(duration, display) {
-//     let timer = duration, minutes, seconds;
-//     setInterval(function () {
-//         minutes = parseInt(timer / 60, 10);
-//         seconds = parseInt(timer % 60, 10);
-
-//         minutes = minutes < 10 ? "0" + minutes : minutes;
-//         seconds = seconds < 10 ? "0" + seconds : seconds;
-
-//         display.textContent = minutes + ":" + seconds;
-
-//         if (--timer < 0) {
-//             timer = duration;
-//         }
-//     }, 1000);
-// }
-
-// window.onload = function () {
-//     let fiveMinutes = 60 * 5,
-//         display = document.querySelector('#time');
-//     startTimer(fiveMinutes, display);
-// };
-
-// console.log(fiveMinutes)
+})

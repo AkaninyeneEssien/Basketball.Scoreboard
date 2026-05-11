@@ -18,10 +18,10 @@
                     <h4 class="team-name">WARRIOR KINGS</h4>
                 </div>
                 <div class="scorebox">
-                    <h3 class="home-scores scores" id="home-scores-el">0</h3>
+                    <h3 class="home-scores scores" id="home-team-el">0</h3>
                 </div>
                 <div class="pad-button-wrapper">
-                    <div class="btn btn-one" onclick="addHomeScore(1)">+1</div>
+                    <div class="btn btn-one" id="home-score" onclick="addHomeScore(1)">+1</div>
                     <div class="btn btn-two" onclick="addHomeScore(2)">+2</div>
                     <div class="btn btn-three" onclick="addHomeScore(3)">+3</div>
                 </div>
@@ -38,7 +38,7 @@
                     <h4 class="team-name">YANK SAINTS</h4>
                 </div>
                 <div class="scorebox">
-                    <h3 class="away-scores scores" id="away-scores-el">0<h3>
+                    <h3 class="away-scores scores" id="away-team-el">0<h3>
                 </div>
                 <div class="pad-button-wrapper">
                     <div class="btn btn-one" onclick="addAwayScore(1)">+1</div>
@@ -48,12 +48,10 @@
             </div>
         </div>
         <div class="button-wrapper">
-            <button class="button btn" onclick="newGame()">NEW GAME</button>
-            <button class="button button-sec btn" onclick="addPeriod()">ADD PERIOD</button>
+            <button class="button btn" id="new-game">NEW GAME</button>
+            <button class="button button-sec btn" id="add-period">ADD PERIOD</button>
         </div>
     </main>
-    
-    <!-- <h1 id="time">05:00</h1> -->
     
 </body>
 <script src="index.js"></script>
